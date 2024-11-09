@@ -1,13 +1,16 @@
-pythob3 -m pip  install numpy
-pythob3 -m pip  install scipy
-pythob3 -m pip  install scikit-learn
-pythob3 -m pip  install matplotlib
+import sklearn.datasets
 
-
-import sklean.datasets
-
-digits = sklean.datasets.load_digits()
+digits = sklearn.datasets.load_digits()
 
 print("データの個数",len(digits.images))
-print("画像データ",len(digits.images))
-print("データの個数",len(digits.images))
+print("画像データ",digits.images[0])
+print("何の数字か",digits.target[0])
+
+import sklearn.datasets
+import matplotlib.pyplot as plt
+
+digits = sklearn.datasets.load_digits()
+
+plt.imshow(digits.images[0], cmap="Greys")
+plt.show()
+
