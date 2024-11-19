@@ -36,3 +36,11 @@ data = {
 idx = ["A太","B介","C子",]
 df = pd.DataFrame(data, index=idx)
 df
+
+import pandas as pd
+df = pd.read_csv("test.csv")
+df
+
+import pandas as pd
+df = pd.read_csv("test.csv", index_col=0, header=None)
+df
